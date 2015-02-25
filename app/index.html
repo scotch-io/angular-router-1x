@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+<!--
+                 _   _                 ___   _ _  __     
+                | | (_)               /   | | (_)/ _|    
+ _ __ ___  _   _| |_ _ _ __   __ _   / /| | | |_| |_ ___ 
+| '__/ _ \| | | | __| | '_ \ / _` | / /_| | | | |  _/ _ \
+| | | (_) | |_| | |_| | | | | (_| | \___  | | | | ||  __/
+|_|  \___/ \__,_|\__|_|_| |_|\__, |     |_/ |_|_|_| \___|
+                              __/ |                      
+                             |___/                       
+-->
+
+	<base href="/">
+	<title>Angular Routing App</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/readable/bootstrap.min.css">
+</head>
+<body ng-app="routerApp" ng-controller="MainController as app">
+<div class="container">
+
+	<div class="navbar navbar-default">
+		<div class="navbar-header">
+			<a router-link="home" class="navbar-brand">
+				<span class="glyphicon glyphicon-fire"></span> Fancy Router
+			</a>
+		</div>
+	</div>
+
+	<div class="jumbotron">
+		<div router-view-port></div>
+	</div>
+
+	<!-- JS -->
+	<!-- we need to load angular, the router, and components -->
+	<script src="/node_modules/angular/angular.js"></script>
+	<script src="/node_modules/angular-new-router/dist/router.es5.js"></script>
+	<script src="/app/components/home/home.js"></script>
+	<script src="/app/app.js"></script>
+</div>
+</body>
+</html>
