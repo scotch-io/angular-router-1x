@@ -32,6 +32,10 @@
 				<span class="glyphicon glyphicon-fire"></span> Fancy Router
 			</a>
 		</div>
+		<ul class="nav navbar-nav">
+			<li><a router-link="home">Home</a></li>
+			<li><a router-link="about">About</a></li>	
+		</ul>
 	</div>
 
 	<div class="jumbotron">
@@ -42,8 +46,9 @@
 	<!-- we need to load angular, the router, and components -->
 	<script src="/node_modules/angular/angular.js"></script>
 	<script src="/node_modules/angular-new-router/dist/router.es5.js"></script>
-	<script src="/app/components/home/home.js"></script>
-	<script src="/app/app.js"></script>
+	<script src="/components/home/home.js"></script>
+	<script src="/components/about/about.js"></script>
+	<script src="/app.js"></script>
 </div>
 </body>
 </html>
