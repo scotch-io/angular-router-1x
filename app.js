@@ -4,7 +4,6 @@ angular.module('routerApp', [
 	'app.inception',
 	'ngNewRouter'
 ])
-	.value('LEVELS', 1)
 	.controller('MainController', ['$router', MainController]);
 
 function MainController($router) {
