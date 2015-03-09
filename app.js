@@ -1,12 +1,16 @@
-angular.module('routerApp', ['ngNewRouter', 'app.home', 'app.about'])
+angular.module('routerApp', [
+	'app.home', 
+	'app.about',
+	'app.inception',
+	'ngNewRouter'
+])
+	.value('LEVELS', 1)
 	.controller('MainController', ['$router', MainController]);
 
 function MainController($router) {
 	$router.config([
-
-		// route for the home page component
 		{ path: '/', component: 'home' },
-		{ path: '/about', component: 'about' }
-
+		{ path: '/about', component: 'about' },
+		{ path: '/inception', component: 'inception' }
 	]);
 }
