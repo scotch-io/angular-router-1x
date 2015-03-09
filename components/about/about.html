@@ -1,5 +1,10 @@
 <div class="page-header text-center">
-	<h1>Sibling Viewports</h1>
+	<h2>About Page</h2>
+	<p>Will show off sibling and multiple viewports.</p>
 </div>
 
-this is the {{ about.message }}
+<div class="jumbotron">
+	{{ about.message }}
+	<div ng-viewport="left"></div>
+	<div ng-viewport="right"></div>
+</div>
