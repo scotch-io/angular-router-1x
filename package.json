@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/scotch-io/angular-new-router",
   "dependencies": {
-    "angular": "^1.3.14",
-    "angular-new-router": "^0.4.0",
+    "angular": "^1.4",
+    "angular-new-router": "^0.5.3",
     "express": "^4.12.0",
     "forever": "^0.14.1"
   }
