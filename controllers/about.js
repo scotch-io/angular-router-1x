@@ -3,10 +3,9 @@ angular
 	.controller('AboutController', AboutController);
 
 function AboutController() {
-	this.thingsFromThe80s = [
-    'Goonies',
-    'The Terminator',
-    'Garfield',
-    'HERE\'S JOHNNYYYYY'
+	this.bestThings = [
+    'Color!',
+    'Comic Sans!',
+    'Stars!'
   ];
 }

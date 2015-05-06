@@ -2,13 +2,14 @@ angular
 	.module('app', [
 		'app.home', 
 		'app.about',
-		'ui.router',
-		'ngComponentRouter'
+		'ui.router'
 	])
 	.config(RouteConfig)
-	// .config(LoaderConfig)
 	.controller('MainController', MainController);
 
+/*
+ * ROUTER CONFIG 
+ */
 function RouteConfig($stateProvider, $urlRouterProvider) {
 
 	$urlRouterProvider.otherwise('/');
@@ -30,18 +31,9 @@ function RouteConfig($stateProvider, $urlRouterProvider) {
 	  });
 }
 
-function LoaderConfig($componentLoaderProvider) {
-	$componentLoaderProvider.setTemplateMapping(function(name) {
-    return './app/views/' + name + '.html';
-	});
-}
-
+/*
+ * MAIN CONTROLLER
+ */
 function MainController() {
-
-	// $router.config([
-	// 	{ path: '/', component: 'home' },
-	// 	{ path: '/about', component: 'about' },
-	// 	{ path: '/inception', component: 'inception' }
-	// ]);
 
 }

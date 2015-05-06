@@ -22,24 +22,25 @@
 </head>
 <body ng-app="app" ng-controller="MainController as main">
 
-	<nav class="navbar navbar-default">
-	<div class="container">
-		<ul class="nav navbar-nav">
+	<!-- NAVBAR -->
+	<nav class="navbar">
+	<div class="navbar-inner container">
+		<ul class="nav navbar-nav text-center">
 			<li><a ui-sref="home">Home</a></li>
 			<li><a ui-sref="about">About</a></li>	
 		</ul>
 	</div>
 	</nav>
 
+	<!-- INJECT OUR ROUTER VIEWS -->
 	<main class="container">
 		<div ui-view></div>
 	</main>
 
+
 	<!-- JS -->
-	<!-- we need to load angular, the router, and components -->
-	<script src="libs/angular1.4.min.js"></script>
+	<script src="libs/angular.min.js"></script>
 	<script src="libs/angular-ui-router.min.js"></script>
-	<script src="libs/router.es5.js"></script>
 
 	<script src="controllers/home.js"></script>
 	<script src="controllers/about.js"></script>
