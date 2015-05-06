@@ -14,48 +14,36 @@
                              |___/                       
 -->
 	<title>Angular Routing App</title>
-
-	<link rel="canonical" href="http://scotch.io" />
 	<base href="/">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/paper/bootstrap.min.css">
-	<style>
-		body 	{ font-size:18px; padding-bottom:50px; }
-		img 	{ margin-bottom:20px; }
-		.navbar	{ border-radius:0; border:0; }
-	</style>
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
 </head>
-<body ng-app="routerApp" ng-controller="MainController as app">
+<body ng-app="app" ng-controller="MainController as main">
 
 	<nav class="navbar navbar-default">
 	<div class="container">
-		<div class="navbar-header">
-			<a ng-link="home" class="navbar-brand">
-				<span class="glyphicon glyphicon-fire text-danger"></span> Fancy Router
-			</a>
-		</div>
 		<ul class="nav navbar-nav">
-			<li><a ng-link="home">Home</a></li>
-			<li><a ng-link="about">About</a></li>	
-			<li><a ng-link="inception">Inception</a></li>	
+			<li><a ui-sref="home">Home</a></li>
+			<li><a ui-sref="about">About</a></li>	
 		</ul>
 	</div>
 	</nav>
 
 	<main class="container">
-		<div ng-viewport></div>
+		<div ui-view></div>
 	</main>
 
 	<!-- JS -->
 	<!-- we need to load angular, the router, and components -->
-	<script src="/node_modules/angular/angular.js"></script>
-	<script src="/node_modules/angular-new-router/dist/router.es5.min.js"></script>
+	<script src="libs/angular1.4.min.js"></script>
+	<script src="libs/angular-ui-router.min.js"></script>
+	<script src="libs/router.es5.js"></script>
 
-	<script src="./app.js"></script>
-	<script src="./components/home/home.js"></script>
-	<script src="./components/about/about.js"></script>
-	<script src="./components/inception/inception.js"></script>
+	<script src="controllers/home.js"></script>
+	<script src="controllers/about.js"></script>
+	<script src="app.js"></script>
 </div>
 </body>
 </html>

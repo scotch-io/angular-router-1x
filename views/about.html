@@ -1,0 +1,14 @@
+<div class="page-header text-center">
+	<h1>About Page</h1>
+</div>
+
+<div class="jumbotron">
+	<h2>Just some stuff from the 80s:</h2>
+
+    <ul>
+        <li ng-repeat="stuff in about.thingsFromThe80s">{{ stuff }}</li>
+    </ul>
+
+	<div ui-view="left"></div>
+	<div ui-view="right"></div>
+</div>
