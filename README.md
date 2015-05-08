@@ -1,8 +1,14 @@
 # Angular New Router in 1.x Apps
 
-An experiment in using the new Angular 2.0 router in Angular 1.x applications. The new router is backwards compatible and provides lots of fun new features.
+[Presentation Slides](http://slides.com/chrissevilleja/ng-vegas-router)
 
-[Angular New Router](https://github.com/angular/router)
+An experiment in using the new Angular 2.0 router in Angular 1.x applications. The new router is backwards compatible and provides lots of fun features.
+
+## What's this Repo About?
+
+Upgrading an application from UI-Router to Component Router. This helps get us ready for Angular 2.0
+
+[Angular Component Router](https://github.com/angular/router)
 
 *NOTE: The router is not finalized yet so this code may have to change as the router is updated.*
 
@@ -26,9 +32,42 @@ For this repository, we are creating a server with Node and serving the applicat
 2. Start the server: `node server.js`
 3. View application in browser: [http://localhost:8080](http://localhost:8080)
 
-## Features
+## Upgrading
 
-- 3 different routes
-- route with parameter
-- `href`s generated with `router-link()`
-- Components help mimic Angular 2.0 applications
+### Add Component Router dependencies
+
+```
+<script src="libs/router.es5.js"></script>
+```
+
+### Inject Component Router into our App
+
+```
+app.module('app', [
+		'app.home',
+		'app.about',
+		'ngComponentRouter'
+	])
+```
+
+### Add Configuration
+
+```
+function MainController($router) {
+	$router.config([
+		{ path: '/', component: 'home' },
+		{ path: '/about', component: 'about' }
+	]);
+}
+```
+
+### Tell Component Router where to find views
+
+```
+app.module('app', [...])
+	.config(function($componentLoaderProvider) {
+		$componentLoaderProvider(function(name) {
+			return './views/' + name + '.html';
+		});
+	});
+```
