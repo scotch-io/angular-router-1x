@@ -1,6 +1,6 @@
 # Angular New Router in 1.x Apps
 
-[Presentation Videp](https://www.youtube.com/watch?v=DGT3Htcqygk)
+[Presentation Video](https://www.youtube.com/watch?v=DGT3Htcqygk)
 
 [Presentation Slides](http://slides.com/chrissevilleja/ng-vegas-router)
 
