@@ -1,5 +1,7 @@
 # Angular New Router in 1.x Apps
 
+[Presentation Videp](https://www.youtube.com/watch?v=DGT3Htcqygk)
+
 [Presentation Slides](http://slides.com/chrissevilleja/ng-vegas-router)
 
 An experiment in using the new Angular 2.0 router in Angular 1.x applications. The new router is backwards compatible and provides lots of fun features.
